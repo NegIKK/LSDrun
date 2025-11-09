@@ -597,6 +597,7 @@ MonoBehaviour:
   - {fileID: 2927696791978644105, guid: 3c0efb199e88ecd4997eb746d1df6090, type: 3}
   - {fileID: 7498367547608148452, guid: ebe970f3d876a834ebe8a2dde43418f5, type: 3}
   - {fileID: 489187839771300782, guid: bbeed911acb8e6342a1497f14673df68, type: 3}
+  - {fileID: 489187839771300782, guid: bbeed911acb8e6342a1497f14673df68, type: 3}
   obstacleSpawnChance: 0.8
   sectors:
   - {fileID: 456075033}
@@ -1600,7 +1601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771742978974317477, guid: 0e7352fbdf1b45f49bd28dc6f89f4487, type: 3}
       propertyPath: m_text
-      value: Side Speed
+      value: Slide Offset
       objectReference: {fileID: 0}
     - target: {fileID: 7245017864843771611, guid: 0e7352fbdf1b45f49bd28dc6f89f4487, type: 3}
       propertyPath: m_Pivot.x
