@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c27a43c49985b14d82455b65fbf3b0c, type: 3}
+  m_Name: Player Move Settings
+  m_EditorClassIdentifier: 
+  runSpeed: 90
+  sideMoveSpeed: 12
+  sideLimit: 10
+  stepsPerMinute: 170
+  jumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 9.250574
+      outSlope: 9.250574
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.071107484
+    - serializedVersion: 3
+      time: 0.2968489
+      value: 0.9966534
+      inSlope: -0.046862863
+      outSlope: -0.046862863
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13410577
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.06292904
+      outSlope: -0.06292904
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18386896
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  jumpDuration: 0.6
+  jumpOffset: 2
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 9.250574
+      outSlope: 9.250574
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.071107484
+    - serializedVersion: 3
+      time: 0.2968489
+      value: 0.9966534
+      inSlope: -0.046862863
+      outSlope: -0.046862863
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13410577
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.06292904
+      outSlope: -0.06292904
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18386896
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  slideDuration: 1
+  slideOffset: -1.5
