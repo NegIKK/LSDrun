@@ -18,7 +18,7 @@ public class SectorsHandler : MonoBehaviour
     [Tooltip("speed in Km/H")]
     [SerializeField] float runSpeed = 90f;
     
-    [RangeAttribute(-1f, 1f)]
+    [Range(-1f, 1f)]
     [SerializeField] float runDirection = -1f;
 
     private void Awake()
@@ -30,6 +30,8 @@ public class SectorsHandler : MonoBehaviour
     void Start()
     {
         // GameHandler.Instance.RegisterSectorHandler(this);
+        GameHandler.Instance.OnBuffGet += UpdateSpeed;
+        SetRunSpeed(GameHandler.Instance.runSpeed);
     }
 
     void FixedUpdate()
@@ -58,6 +60,11 @@ public class SectorsHandler : MonoBehaviour
     public void AddRunSpeed(float newRunSpeed)
     {
         runSpeed += newRunSpeed;
+    }
+
+    void UpdateSpeed(BuffStatsSO buff)
+    {
+        runSpeed = GameHandler.Instance.runSpeed;
     }
 
     public void AddSector()

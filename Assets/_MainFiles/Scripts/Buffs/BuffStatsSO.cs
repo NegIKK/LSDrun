@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Buff Stats", menuName = "LSDrun/Buff Stats")]
 public class BuffStatsSO : ScriptableObject
 {
+    public int score = 0;
+    
     [Header("Move")]
     public float runSpeed = 0f;
     public float strafeSpeed = 0f;

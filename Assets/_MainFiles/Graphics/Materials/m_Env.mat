@@ -63,7 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - ENABLE_BENDING: 0
+    - ENABLE_BENDING: 1
     - _Amount: 0.093
     - _BendAmount: 0.015
     - _QueueControl: 0

@@ -17,7 +17,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        // GameHandler.Instance.OnBuffGet += UpdatePlayerSettings;
+        GameHandler.Instance.OnBuffGet += UpdatePlayerStatsText;
 
         PlayerSettingsSO playerSettings = GameHandler.Instance.GetPlayerSettings();
         SetUITextValues(playerSettings);
@@ -53,14 +53,25 @@ public class SettingsMenu : MonoBehaviour
         float.TryParse(slideDuration.text, out playerSettingsToShare.slideDuration);
         float.TryParse(slideOffset.text, out playerSettingsToShare.slideOffset);
 
-        GameHandler.Instance.OnPlayerSettingsUpdate?.Invoke(playerSettingsToShare);
+        GameHandler.Instance.OnMovementStatsUpdate?.Invoke(playerSettingsToShare);
 
         // Debug.Log("updateSettingsFromUI");
     }
 
+    void UpdatePlayerStatsText(BuffStatsSO buff)
+    {
+        bpm.text = "" + GameHandler.Instance.bpm;
+        moveSpeed.text = "" + GameHandler.Instance.runSpeed;
+        sideSpeed.text = "" + GameHandler.Instance.strafeSpeed;
+        jumpDuration.text = "" + GameHandler.Instance.jumpDuration;
+        jumpOffset.text = "" + GameHandler.Instance.jumpOffset;
+        slideDuration.text = "" + GameHandler.Instance.slideDuration;
+        slideOffset.text = "" + GameHandler.Instance.slideOffset;
+    }
+
     public void SetStandartPlayerSettings()
     {
-        GameHandler.Instance.OnPlayerSettingsUpdate?.Invoke(playerSettingsStandart);
+        GameHandler.Instance.OnMovementStatsUpdate?.Invoke(playerSettingsStandart);
         SetUITextValues(playerSettingsStandart);
 
         // Debug.Log("updateSettingsToStandart");
