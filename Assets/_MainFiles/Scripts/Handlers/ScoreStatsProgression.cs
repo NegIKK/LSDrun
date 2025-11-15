@@ -30,13 +30,23 @@ public class ScoreStatsProgression : MonoBehaviour
     [SerializeField] ScoreCurveProgress fovProgress;
     // [SerializeField] ScoreCurveProgress strafeProgress;
 
+    void Start()
+    {
+        GameHandler.Instance.OnPlayerStatsChange += PlayerStatsUpdate;
+    }
+
     void Update()
+    {
+
+    }
+
+    void PlayerStatsUpdate()
     {
         int score = GameHandler.Instance.mainScore;
 
         GameHandler.Instance.runSpeed = runSpeedProgress.Evaluate(score);
         GameHandler.Instance.strafeSpeed = strafeProgress.Evaluate(score);
         GameHandler.Instance.bpm = bpmProgress.Evaluate(score);
-
+        GameHandler.Instance.currentFov = fovProgress.Evaluate(score);
     }
 }

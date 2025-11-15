@@ -948,6 +948,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles: {fileID: 608838422}
   speed: {fileID: 1290328309}
+--- !u!1 &586793249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6710076935724554221, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &608838420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &776739657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6904264693697596751, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &807393974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2146,6 +2156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1481818343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5274554060375317722, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1497576455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,18 +2611,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570223112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99932f18ffb266f4fa43ae3905a0f443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxVolume: 0.351
-  musicLoops:
-  - {fileID: 11400000, guid: 6e3426b26ecba3b4789b24e0d9843178, type: 2}
-  - {fileID: 11400000, guid: 41b1a53859a52be42a19bf024d5e7a55, type: 2}
-  - {fileID: 11400000, guid: 5708e1d51221ce74585a591137fc43d1, type: 2}
-  - {fileID: 11400000, guid: cc6b0acc9549fb149b3f5337749ca65b, type: 2}
-  - {fileID: 11400000, guid: 10e639c673d834f448367957f5344e7a, type: 2}
+  mixer: {fileID: 24100000, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+  musicParts:
+  - snapshot: {fileID: 1420325811587290665, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 0
+    smoothChangeTime: 0
+  - snapshot: {fileID: 24500006, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 100
+    smoothChangeTime: 0.15
 --- !u!4 &1570223115
 Transform:
   m_ObjectHideFlags: 0
@@ -4312,6 +4329,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7245017864843771611, guid: 0e7352fbdf1b45f49bd28dc6f89f4487, type: 3}
   m_PrefabInstance: {fileID: 1792543198}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1811824247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7223265605448202398, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1826083313 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8385571020057044956, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1885554838 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7245017864843771611, guid: 0e7352fbdf1b45f49bd28dc6f89f4487, type: 3}
@@ -4485,6 +4512,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   slideDuration: 1
   slideOffset: -1.5
+  palyerCamera: {fileID: 1826083313}
+  currentFov: 70
+  minFov: 60
+  maxFov: 100
   crossedObstaclesCount: 0
   mainScore: 0
   sectorsHandlers:
@@ -4519,27 +4550,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeedProgress:
     minScore: 0
-    maxScore: 100
+    maxScore: 150
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.18470912
+        outSlope: 0.18470912
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
+        outWeight: 0.4171452
+      - serializedVersion: 3
+        time: 0.5029433
+        value: 0.20960212
+        inSlope: 1.0333018
+        outSlope: 1.0333018
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.25287423
+        outWeight: 0.23560575
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: 2.138414
+        outSlope: 2.138414
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.18048206
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -4547,28 +4587,37 @@ MonoBehaviour:
     minValue: 50
     maxValue: 230
   strafeProgress:
-    minScore: 0
-    maxScore: 100
+    minScore: 20
+    maxScore: 150
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
+        inSlope: 0.9155353
+        outSlope: 0.9155353
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
+        outWeight: 0.25649628
+      - serializedVersion: 3
+        time: 0.50405246
+        value: 0.5117402
+        inSlope: 1.2466378
+        outSlope: 1.2466378
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.23172408
+        outWeight: 0.2273664
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.06926579
+        outSlope: 0.06926579
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.2528617
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -4620,23 +4669,88 @@ MonoBehaviour:
     maxScore: 100
     curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    minValue: 0
-    maxValue: 0
+    minValue: 60
+    maxValue: 110
 --- !u!114 &1960953108 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1941036577156401834, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
   m_PrefabInstance: {fileID: 370498128091455658}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1481818343}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca18ab579c30dc46bf64627cb69614b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1960953113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481818343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8fbb07c94a8d041a4cc1853b138976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  palyerCamera: {fileID: 1826083313}
+  mirror: {fileID: 1811824247}
+  minMirrorTransform: {fileID: 2124481509}
+  maxMirrorTransform: {fileID: 776739657}
+  particles: {fileID: 586793249}
+  particlesEnablingScore: 85
+  mirrorPositionProgress:
+    minScore: 0
+    maxScore: 100
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    minValue: 0
+    maxValue: 1
 --- !u!1 &1985758245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6689568498369621442, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
@@ -4780,6 +4894,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043673026}
   m_CullTransparentMesh: 1
+--- !u!4 &2124481509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7706126863392621358, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2145418142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4896,9 +5015,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1003066158741181766, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: m_Name
+      value: standart
+      objectReference: {fileID: 0}
     - target: {fileID: 5274554060375317722, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: mirror
+      value: 
+      objectReference: {fileID: 1811824247}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 586793249}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: maxMirrorTransform
+      value: 
+      objectReference: {fileID: 776739657}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: minMirrorTransform
+      value: 
+      objectReference: {fileID: 2124481509}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: particlesEnablingScore
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: mirrorPositionProgress.maxScore
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: mirrorPositionProgress.maxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: mirrorPositionProgress.curve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: mirrorPositionProgress.curve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      propertyPath: mirrorPositionProgress.curve.m_Curve.Array.data[1].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8822619332626612637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4940,10 +5103,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5977906918120663637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5274554060375317722, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960953113}
   m_SourcePrefab: {fileID: 100100000, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
 --- !u!1001 &1019675371541114608
 PrefabInstance:

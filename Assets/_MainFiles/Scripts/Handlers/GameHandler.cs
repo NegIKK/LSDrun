@@ -10,6 +10,8 @@ public class GameHandler : MonoBehaviour
 
     public Action<int> OnObstaclesCountUpdate;
     public Action<PlayerSettingsSO> OnMovementStatsUpdate;
+    public Action OnPlayerStatsChange;
+    // public Action OnMusicPartChange;
     public Action<BuffStatsSO> OnBuffGet;
 
     [SerializeField] PlayerSettingsSO playerSettings;
@@ -30,6 +32,12 @@ public class GameHandler : MonoBehaviour
     [SerializeField] public float slideDuration = 3f;
     [SerializeField] public float slideOffset = -1.5f;
 
+    [Header("Camera Settings")]
+    [SerializeField] public Camera palyerCamera;
+    [SerializeField] public float currentFov;
+    [SerializeField] public float minFov;
+    [SerializeField] public float maxFov;
+
     [Header("Scores")]
     [SerializeField] int crossedObstaclesCount = 0;
     public int mainScore = 0;
@@ -46,8 +54,10 @@ public class GameHandler : MonoBehaviour
 
     void Start()
     {
-        GameHandler.Instance.OnMovementStatsUpdate += UpdatePlayerSettings;
-        GameHandler.Instance.OnBuffGet += GetBuff;
+        OnMovementStatsUpdate += UpdatePlayerSettings;
+        OnBuffGet += GetBuff;
+
+        OnPlayerStatsChange?.Invoke();
     }
 
     void FixedUpdate()
@@ -107,6 +117,7 @@ public class GameHandler : MonoBehaviour
         slideOffset += buffStats.slideOffset;
 
         mainScore += buffStats.score;
+        OnPlayerStatsChange?.Invoke();
     }
 
     public void AddCrossedObstacleCount()

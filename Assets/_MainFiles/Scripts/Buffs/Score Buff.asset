@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d674834d9a3babd478bdf29abbd3cc85, type: 3}
   m_Name: Score Buff
   m_EditorClassIdentifier: 
-  score: 1
+  score: 5
   runSpeed: 0
   strafeSpeed: 0
   sideLimit: 0
