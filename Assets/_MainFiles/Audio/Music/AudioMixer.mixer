@@ -157,7 +157,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bass
+  m_Name: 'bass reese '
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 4812c698d91d3d64087d2c407470402b
   m_Children: []
@@ -212,7 +212,7 @@ AudioMixerController:
     - fe789b221dcfdf3429507a7e7c9baf0e
     name: Stems
   m_CurrentViewIndex: 1
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 1420325811587290665}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -276,14 +276,15 @@ AudioMixerSnapshotController:
   m_SnapshotID: 264e452cdb812d34c97b1572778c613e
   m_FloatValues:
     3b8b0540575791341b5655561fd2b4e1: 0.025578512
+    f8c4ff625c3e13543870873ac1b6fa02: -30.320126
     486351c214a00974cbeea2f67ef3f19e: 0.10800299
     13323a85d62f4e54e8dc2e89a17d0d45: -80
     e61e2266e2624b54db3cf2b16bb97fe7: -80
     abd7f0761fc81b54ab7917bbb4cf8c5a: 0.10800299
     0f4493fa04334834cb5a9f8f9a008ce4: 0.44032478
     673f701c3dd4fda4f90bc4c2ba702adf: 0
-    ead8683c267829340b22a3874f8ac834: -14.221897
-    94bbbdac0310cb34d8ff0e607b1000ae: -80
+    ead8683c267829340b22a3874f8ac834: -24.900742
+    94bbbdac0310cb34d8ff0e607b1000ae: -33.82202
   m_TransitionOverrides: {}
 --- !u!244 &6375829672195495537
 AudioMixerEffectController:
