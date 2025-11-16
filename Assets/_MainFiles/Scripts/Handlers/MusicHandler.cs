@@ -4,11 +4,20 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 [System.Serializable]
-public class MusicPart
+public class MusicSnapshot
 {
     public AudioMixerSnapshot snapshot;
     public int scoreToChange;
     public float smoothChangeTime = 0f;
+
+    public List<AudioGroupByScore> audioGroups = new List<AudioGroupByScore>();
+}
+
+[System.Serializable]
+public class AudioGroupByScore
+{
+    public AudioMixerGroup group;
+    public ScoreCurveProgress groupProgress;
 }
 public class MusicHandler : MonoBehaviour
 {
@@ -18,7 +27,7 @@ public class MusicHandler : MonoBehaviour
     // [SerializeField] List<LoopSO> musicLoops = new List<LoopSO>();
 
     [SerializeField] AudioMixer mixer;
-    [SerializeField] List<MusicPart> musicParts = new List<MusicPart>();
+    [SerializeField] List<MusicSnapshot> musicSnapshots = new List<MusicSnapshot>();
     int musicPartIndex = -1;
     
     // AudioSource audioSource;
@@ -53,31 +62,33 @@ public class MusicHandler : MonoBehaviour
         //     }
         // }
         GameHandler.Instance.OnPlayerStatsChange += OnPlayerStatsChange;
-
+        
     }
 
     void OnPlayerStatsChange()
     {
         int score = GameHandler.Instance.mainScore;
 
-        if (musicPartIndex >= musicParts.Count - 1)
+        
+
+        if (musicPartIndex >= musicSnapshots.Count - 1)
         {
             return;
         }
 
-        MusicPart nextPart = musicParts[musicPartIndex + 1];
+        MusicSnapshot nextSnapshot = musicSnapshots[musicPartIndex + 1];
 
-        if(score >= nextPart.scoreToChange)
+        if(score >= nextSnapshot.scoreToChange)
         {
-            ActivateMusicPart(musicPartIndex + 1);
+            ActivateSnapshot(musicPartIndex + 1);
         }
     }
     
-    void ActivateMusicPart(int index)
+    void ActivateSnapshot(int index)
     {
         musicPartIndex = index;
 
-        MusicPart musicPart = musicParts[index];
+        MusicSnapshot musicPart = musicSnapshots[index];
 
         float timeToChange = musicPart.smoothChangeTime;
         musicPart.snapshot.TransitionTo(timeToChange);
