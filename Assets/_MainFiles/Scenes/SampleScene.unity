@@ -3620,7 +3620,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVolume: 0.351
   mixer: {fileID: 24100000, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
-  musicSnapshots: []
+  musicSnapshots:
+  - snapshot: {fileID: 4737096185414796816, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 20
+    smoothChangeTime: 0
+    audioGroups: []
+  - snapshot: {fileID: -569240113954866714, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 30
+    smoothChangeTime: 0
+    audioGroups: []
+  - snapshot: {fileID: 3716582211785776826, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 40
+    smoothChangeTime: 0
+    audioGroups: []
+  - snapshot: {fileID: 943402809863675064, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 50
+    smoothChangeTime: 0
+    audioGroups: []
+  - snapshot: {fileID: 943402809863675064, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 60
+    smoothChangeTime: 0
+    audioGroups: []
+  - snapshot: {fileID: 5804540105175312094, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
+    scoreToChange: 70
+    smoothChangeTime: 0
+    audioGroups: []
 --- !u!4 &1570223115
 Transform:
   m_ObjectHideFlags: 0
@@ -4640,7 +4664,7 @@ MonoBehaviour:
   minFov: 60
   maxFov: 100
   crossedObstaclesCount: 0
-  mainScore: 15
+  mainScore: 0
   sectorsHandlers:
   - {fileID: 448314755}
   - {fileID: 387765095}
