@@ -68,13 +68,18 @@ public class MusicHandler : MonoBehaviour
     void OnPlayerStatsChange()
     {
         int score = GameHandler.Instance.mainScore;
-
+   
         
-
         if (musicPartIndex >= musicSnapshots.Count - 1)
         {
             return;
         }
+
+        foreach(AudioGroupByScore audioGroup in musicSnapshots[musicPartIndex].audioGroups)
+        {
+            audioGroup.groupProgress.Evaluate(score);
+        }
+        
 
         MusicSnapshot nextSnapshot = musicSnapshots[musicPartIndex + 1];
 
