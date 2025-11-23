@@ -5,17 +5,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] CameraShake cameraShake;
-    // [Header("Debug info. Set In GameHandler!")]
-    // [SerializeField] float strafeSpeed = 5f;
-    // [SerializeField] float sideLimit = 5f;
 
-    // [SerializeField] AnimationCurve jumpCurve;
-    // [SerializeField] float jumpDuration = 3f;
-    // [SerializeField] float jumpOffset = 2f;
-
-    // [SerializeField] AnimationCurve slideCurve;
-    // [SerializeField] float slideDuration = 3f;
-    // [SerializeField] float slideOffset = -1.5f;
  
     bool isSliding;
     bool isJumping;
@@ -23,9 +13,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        // UpdatePlayerSettings(GameHandler.Instance.GetPlayerSettings());
-        // GameHandler.Instance.OnPlayerSettingsUpdate += UpdatePlayerSettings;
-        // GameHandler.Instance.OnBuffGet += GetBuff;
+
     }
 
     void Update()
@@ -165,36 +153,6 @@ public class Player : MonoBehaviour
     {
         Debug.Log("LOL YOU DIED");
     }
-
-    // void UpdatePlayerSettings(PlayerSettingsSO playerSettings)
-    // {
-    //     strafeSpeed = playerSettings.strafeSpeed;
-    //     sideLimit = playerSettings.sideLimit;
-    //     jumpCurve = playerSettings.jumpCurve;
-    //     jumpDuration = playerSettings.jumpDuration;
-    //     jumpOffset = playerSettings.jumpOffset;
-    //     slideCurve = playerSettings.slideCurve;
-    //     slideDuration = playerSettings.slideDuration;
-    //     slideOffset = playerSettings.slideOffset;
-
-    //     cameraShake.SetStepsPerMinute(playerSettings.stepsPerMinute);
-
-    //     SectorsHandler sectorsHandler = GameHandler.Instance.GetSectorHandlerByType("Main");
-    //     sectorsHandler.SetRunSpeed(playerSettings.runSpeed);
-    // }
-
-    // void GetBuff(BuffStatsSO buffStats)
-    // {
-    //     strafeSpeed += buffStats.strafeSpeed;
-    //     sideLimit += buffStats.sideLimit;        
-    //     jumpDuration += buffStats.jumpDuration;
-    //     jumpOffset += buffStats.jumpOffset;        
-    //     slideDuration += buffStats.slideDuration;
-    //     slideOffset += buffStats.slideOffset;
-
-    //     SectorsHandler sectorsHandler = GameHandler.Instance.GetSectorHandlerByType("Main");
-    //     sectorsHandler.AddRunSpeed(buffStats.runSpeed);
-    // }
     
 
     void OnTriggerEnter(Collider other)

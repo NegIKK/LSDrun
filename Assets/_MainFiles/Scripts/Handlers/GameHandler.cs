@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using NUnit.Framework.Interfaces;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 
 
@@ -11,8 +13,8 @@ public class GameHandler : MonoBehaviour
     public Action<int> OnObstaclesCountUpdate;
     public Action<PlayerSettingsSO> OnMovementStatsUpdate;
     public Action OnPlayerStatsChange;
-    // public Action OnMusicPartChange;
     public Action<BuffStatsSO> OnBuffGet;
+    public Action OnBeatEvent;
 
     [SerializeField] PlayerSettingsSO playerSettings;
     [SerializeField] float sceneTime = 0f;
@@ -65,6 +67,20 @@ public class GameHandler : MonoBehaviour
         sceneTime = Time.time;
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            mainScore += 1;
+            OnPlayerStatsChange?.Invoke();
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            mainScore -= 1;
+            OnPlayerStatsChange?.Invoke();
+        }
+    }
+
     public void RegisterSectorHandler(SectorsHandler sectorsHandler)
     {
         sectorsHandlers.Add(sectorsHandler);
@@ -91,6 +107,7 @@ public class GameHandler : MonoBehaviour
 
     void UpdatePlayerSettings(PlayerSettingsSO playerSettings)
     {
+        runSpeed += playerSettings.runSpeed;
         strafeSpeed = playerSettings.strafeSpeed;
         sideLimit = playerSettings.sideLimit;
         jumpCurve = playerSettings.jumpCurve;

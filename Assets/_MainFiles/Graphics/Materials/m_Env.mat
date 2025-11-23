@@ -65,7 +65,7 @@ Material:
     m_Floats:
     - ENABLE_BENDING: 1
     - _Amount: 0.093
-    - _BendAmount: 0.015
+    - _BendAmount: 0.035
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []

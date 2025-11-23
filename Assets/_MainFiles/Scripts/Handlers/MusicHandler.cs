@@ -22,16 +22,15 @@ public class AudioGroupByScore
 public class MusicHandler : MonoBehaviour
 {
     public static MusicHandler Instance { get; private set; }
-    [Range(0f, 1f)]
-    [SerializeField] float maxVolume = .5f;
-    // [SerializeField] List<LoopSO> musicLoops = new List<LoopSO>();
 
     [SerializeField] AudioMixer mixer;
+    [SerializeField] float BPM = 170f;
     [SerializeField] List<MusicSnapshot> musicSnapshots = new List<MusicSnapshot>();
-    int musicPartIndex = -1;
     
-    // AudioSource audioSource;
-    // List<AudioSource> sources = new List<AudioSource>();
+    int musicPartIndex = -1;
+
+    float beatInterval;          // длительность доли
+    float nextBeatTime;          // время следующего бита (по audioSource.time)
 
     private void Awake()
     {
@@ -41,45 +40,37 @@ public class MusicHandler : MonoBehaviour
 
     void Start()
     {
-        // audioSource = GetComponent<AudioSource>();
-        // PlayerSettingsSO playerSettings = GameHandler.Instance.GetPlayerSettings();
+        // GameHandler.Instance.OnPlayerStatsChange += OnPlayerStatsChange;
+        GameHandler.Instance.OnBeatEvent += OnBeat; 
 
-        // foreach(LoopSO loop in musicLoops)
-        // {
-        //     AudioSource src = gameObject.AddComponent<AudioSource>();
-        //     src.clip = loop.audioLoop;
-        //     src.loop = true;
-        //     src.playOnAwake = false;
-        //     src.volume = 0f;            // всё стартует на mute
-        //     src.Play();
-
-        //     sources.Add(src);
-
-        //     if (loop.activationSpeed >= playerSettings.runSpeed)
-        //     {
-        //         src.volume = maxVolume;
-
-        //     }
-        // }
-        GameHandler.Instance.OnPlayerStatsChange += OnPlayerStatsChange;
-        
+        beatInterval = 60f / BPM;
+        nextBeatTime = beatInterval;   
     }
 
-    void OnPlayerStatsChange()
+    void Update()
+    {
+        CheckBeat();
+    }
+
+    void CheckBeat()
+    {
+        float time = Time.time;
+
+        if(time >= nextBeatTime)
+        {
+            nextBeatTime += beatInterval;
+            GameHandler.Instance.OnBeatEvent?.Invoke();
+        }
+    }
+
+    void OnBeat()
     {
         int score = GameHandler.Instance.mainScore;
-   
-        
+           
         if (musicPartIndex >= musicSnapshots.Count - 1)
         {
             return;
         }
-
-        foreach(AudioGroupByScore audioGroup in musicSnapshots[musicPartIndex].audioGroups)
-        {
-            audioGroup.groupProgress.Evaluate(score);
-        }
-        
 
         MusicSnapshot nextSnapshot = musicSnapshots[musicPartIndex + 1];
 
@@ -88,7 +79,7 @@ public class MusicHandler : MonoBehaviour
             ActivateSnapshot(musicPartIndex + 1);
         }
     }
-    
+
     void ActivateSnapshot(int index)
     {
         musicPartIndex = index;

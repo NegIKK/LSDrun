@@ -17,10 +17,10 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        GameHandler.Instance.OnBuffGet += UpdatePlayerStatsText;
+        GameHandler.Instance.OnPlayerStatsChange += UpdatePlayerStatsText;
 
-        PlayerSettingsSO playerSettings = GameHandler.Instance.GetPlayerSettings();
-        SetUITextValues(playerSettings);
+        // PlayerSettingsSO playerSettings = GameHandler.Instance.GetPlayerSettings();
+        // SetUITextValues(playerSettings);
     }
 
     void Update()
@@ -58,7 +58,7 @@ public class SettingsMenu : MonoBehaviour
         // Debug.Log("updateSettingsFromUI");
     }
 
-    void UpdatePlayerStatsText(BuffStatsSO buff)
+    void UpdatePlayerStatsText()
     {
         bpm.text = "" + GameHandler.Instance.bpm;
         moveSpeed.text = "" + GameHandler.Instance.runSpeed;

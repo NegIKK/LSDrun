@@ -32,7 +32,8 @@ public class ScoreStatsProgression : MonoBehaviour
 
     void Start()
     {
-        GameHandler.Instance.OnPlayerStatsChange += PlayerStatsUpdate;
+        PlayerStatsChange();
+        GameHandler.Instance.OnPlayerStatsChange += PlayerStatsChange;
     }
 
     void Update()
@@ -40,7 +41,7 @@ public class ScoreStatsProgression : MonoBehaviour
 
     }
 
-    void PlayerStatsUpdate()
+    void PlayerStatsChange()
     {
         int score = GameHandler.Instance.mainScore;
 

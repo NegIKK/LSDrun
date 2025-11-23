@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -11,6 +12,9 @@ public class SectorsHandler : MonoBehaviour
 
     [SerializeField] List<GameObject> sectorPrefabs = new List<GameObject>();
     [SerializeField] List<GameObject> obstaclePrefabs = new List<GameObject>();
+    [SerializeField] List<Transform> obstacleSpawnPoints = new List<Transform>();
+    [SerializeField] float obstacleDelayTime = 21f;
+    [SerializeField] float currentTime;
     [SerializeField] float obstacleSpawnChance = 0.8f;
 
     [SerializeField] List<GameObject> sectors = new List<GameObject>();
@@ -30,12 +34,16 @@ public class SectorsHandler : MonoBehaviour
     void Start()
     {
         // GameHandler.Instance.RegisterSectorHandler(this);
-        GameHandler.Instance.OnBuffGet += UpdateSpeed;
+        GameHandler.Instance.OnPlayerStatsChange += UpdateSpeed;
+        // GameHandler.Instance.OnBeatEvent += AddObstaclesByTime;
+
         SetRunSpeed(GameHandler.Instance.runSpeed);
     }
 
     void FixedUpdate()
     {
+        runSpeed = GameHandler.Instance.runSpeed;
+
         foreach (GameObject sector in sectors)
         {
             Vector3 sectorPos = sector.transform.position;
@@ -44,6 +52,13 @@ public class SectorsHandler : MonoBehaviour
             sectorPos.z += runSpeedConverted * runDirection * Time.deltaTime;
 
             sector.transform.position = sectorPos;
+        }
+
+        currentTime += Time.deltaTime;
+        if(currentTime >= obstacleDelayTime)
+        {
+            AddObstaclesByTime();
+            currentTime = 0f;
         }
     }
 
@@ -62,7 +77,7 @@ public class SectorsHandler : MonoBehaviour
         runSpeed += newRunSpeed;
     }
 
-    void UpdateSpeed(BuffStatsSO buff)
+    void UpdateSpeed()
     {
         runSpeed = GameHandler.Instance.runSpeed;
     }
@@ -76,7 +91,7 @@ public class SectorsHandler : MonoBehaviour
         Transform spawnPoint = lastSector.GetComponent<SectorTrigger>().GetNextSectorTransform();
 
         GameObject createdSector = Instantiate(sectorToSpawn, spawnPoint.position, Quaternion.identity);
-        AddObstacles(createdSector);
+        // AddObstacles(createdSector);
 
         sectors.Add(createdSector);
     }
@@ -97,9 +112,28 @@ public class SectorsHandler : MonoBehaviour
         }
     }
 
+    void AddObstaclesByTime()
+    {
+        foreach (Transform spawnPoint in obstacleSpawnPoints)
+        {
+            if(Random.Range(0f, 1f) <= obstacleSpawnChance)
+            {
+                GameObject lastSector = sectors[sectors.Count - 1];
+                int index = Random.Range(0, obstaclePrefabs.Count);
+                GameObject obstacleToSpawn = obstaclePrefabs[index];
+                Instantiate(obstacleToSpawn, spawnPoint.position, Quaternion.identity, lastSector.transform);
+            }
+        }    
+    }
+
     public void RemoveSector(GameObject sectorToRemove)
     {
         sectors.Remove(sectorToRemove);
         Destroy(sectorToRemove);
     }
+
+    // IEnumerator AddObstacle(float time)
+    // {
+        
+    // }
 }
