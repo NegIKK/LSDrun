@@ -6,6 +6,7 @@ public class BonusSpawner : MonoBehaviour
     [Range(1,32)]
     [SerializeField] int spawnStep;
     int maxSteps;
+    
     [SerializeField] float minSpawnDistance = 75f;
 
     SectorsHandler sectorsHandler;

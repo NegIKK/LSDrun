@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonus: {fileID: 7498367547608148452, guid: dc72d3dd7fffd774c885866c1a93879e, type: 3}
-  spawnStep: 32
+  spawnStep: 4
   minSpawnDistance: 30
 --- !u!1 &456075033 stripped
 GameObject:
@@ -3894,7 +3894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
   BPM: 180
-  maxSteps: 32
+  maxSteps: 4
   currentStep: 0
   musicSnapshots:
   - snapshot: {fileID: 4737096185414796816, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}

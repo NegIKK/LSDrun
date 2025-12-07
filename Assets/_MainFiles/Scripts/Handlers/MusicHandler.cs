@@ -38,8 +38,10 @@ public class MusicHandler : MonoBehaviour
     
     int musicPartIndex = -1;
 
+    double dspStart;
+
     public float BeatInterval { get; private set; }         // длительность доли
-    public float NextBeatTime { get; private set; }          // время следующего бита (по audioSource.time)
+    public double NextBeatTime { get; private set; }          // время следующего бита (по audioSource.time)
 
     private void Awake()
     {
@@ -51,6 +53,17 @@ public class MusicHandler : MonoBehaviour
 
         AudioSource[] sources = audioSourceObject.GetComponents<AudioSource>();
         audioSources.AddRange(sources);
+
+
+        dspStart = AudioSettings.dspTime + 0.1f;
+
+        foreach(AudioSource source in audioSources)
+        {
+            source.PlayScheduled(dspStart);
+        }
+        
+        NextBeatTime = dspStart + BeatInterval;
+
     }
 
     void Start()
@@ -66,7 +79,7 @@ public class MusicHandler : MonoBehaviour
 
     void CheckBeat()
     {
-        float time = Time.time;
+        double time = AudioSettings.dspTime;
 
         if(time >= NextBeatTime)
         {
@@ -77,15 +90,15 @@ public class MusicHandler : MonoBehaviour
                 currentStep = 0;
             }
 
-            if (!musicIsPlaying)
-            {
-                musicIsPlaying = true;
+            // if (!musicIsPlaying)
+            // {
+            //     musicIsPlaying = true;
                 
-                foreach(AudioSource source in audioSources)
-                {
-                    source.Play();
-                }
-            }
+            //     foreach(AudioSource source in audioSources)
+            //     {
+            //         source.Play();
+            //     }
+            // }
 
             ++currentStep;
             GameHandler.Instance.OnBeatEvent?.Invoke(currentStep);
