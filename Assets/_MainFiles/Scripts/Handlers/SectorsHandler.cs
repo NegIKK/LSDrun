@@ -59,11 +59,11 @@ public class SectorsHandler : MonoBehaviour
         }
 
         currentTime += Time.deltaTime;
-        if(currentTime >= obstacleDelayTime)
-        {
-            AddObstaclesByTime();
-            currentTime = 0f;
-        }
+        // if(currentTime >= obstacleDelayTime)
+        // {
+        //     AddObstaclesByTime();
+        //     currentTime = 0f;
+        // }
     }
 
     public string GetSectorsHandlerType()
