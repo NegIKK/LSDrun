@@ -7,8 +7,6 @@ public class SectorsHandler : MonoBehaviour
 {
     // public static SectorsHandler Instance { get; private set; }
     [SerializeField] string sectorsHandlerType;
-    [SerializeField] bool useDebugPrefabs = false;
-    [SerializeField] List<GameObject> sectorDebugPrefabs = new List<GameObject>();
 
     [SerializeField] List<GameObject> sectorPrefabs = new List<GameObject>();
     [SerializeField] List<GameObject> obstaclePrefabs = new List<GameObject>();
@@ -17,13 +15,18 @@ public class SectorsHandler : MonoBehaviour
     [SerializeField] float currentTime;
     [SerializeField] float obstacleSpawnChance = 0.8f;
 
-    [SerializeField] List<GameObject> sectors = new List<GameObject>();
+    public List<GameObject> currentSectors = new List<GameObject>();
 
     [Tooltip("speed in Km/H")]
     [SerializeField] float runSpeed = 90f;
     
     [Range(-1f, 1f)]
     [SerializeField] float runDirection = -1f;
+
+    [SerializeField] float spawnPointDistance;
+    [SerializeField] GameObject bonus;
+    [SerializeField] int bonusStep;
+    private HashSet<int> spawnedBonusSteps = new HashSet<int>(); // чтобы бонус не спавнился несколько раз на одном шаге
 
     private void Awake()
     {
@@ -36,6 +39,7 @@ public class SectorsHandler : MonoBehaviour
         // GameHandler.Instance.RegisterSectorHandler(this);
         GameHandler.Instance.OnPlayerStatsChange += UpdateSpeed;
         // GameHandler.Instance.OnBeatEvent += AddObstaclesByTime;
+        // GameHandler.Instance.OnBeatEvent += AddBonus;
 
         SetRunSpeed(GameHandler.Instance.runSpeed);
     }
@@ -44,7 +48,7 @@ public class SectorsHandler : MonoBehaviour
     {
         runSpeed = GameHandler.Instance.runSpeed;
 
-        foreach (GameObject sector in sectors)
+        foreach (GameObject sector in currentSectors)
         {
             Vector3 sectorPos = sector.transform.position;
 
@@ -72,11 +76,6 @@ public class SectorsHandler : MonoBehaviour
         runSpeed = newRunSpeed;
     }
 
-    public void AddRunSpeed(float newRunSpeed)
-    {
-        runSpeed += newRunSpeed;
-    }
-
     void UpdateSpeed()
     {
         runSpeed = GameHandler.Instance.runSpeed;
@@ -87,13 +86,13 @@ public class SectorsHandler : MonoBehaviour
         int sectorPrefabIndex = Random.Range(0, sectorPrefabs.Count);
         GameObject sectorToSpawn = sectorPrefabs[sectorPrefabIndex];
 
-        GameObject lastSector = sectors[sectors.Count - 1];
+        GameObject lastSector = currentSectors[currentSectors.Count - 1];
         Transform spawnPoint = lastSector.GetComponent<SectorTrigger>().GetNextSectorTransform();
 
         GameObject createdSector = Instantiate(sectorToSpawn, spawnPoint.position, Quaternion.identity);
         // AddObstacles(createdSector);
 
-        sectors.Add(createdSector);
+        currentSectors.Add(createdSector);
     }
     
     void AddObstacles(GameObject sector)
@@ -118,7 +117,7 @@ public class SectorsHandler : MonoBehaviour
         {
             if(Random.Range(0f, 1f) <= obstacleSpawnChance)
             {
-                GameObject lastSector = sectors[sectors.Count - 1];
+                GameObject lastSector = currentSectors[currentSectors.Count - 1];
                 int index = Random.Range(0, obstaclePrefabs.Count);
                 GameObject obstacleToSpawn = obstaclePrefabs[index];
                 Instantiate(obstacleToSpawn, spawnPoint.position, Quaternion.identity, lastSector.transform);
@@ -128,12 +127,7 @@ public class SectorsHandler : MonoBehaviour
 
     public void RemoveSector(GameObject sectorToRemove)
     {
-        sectors.Remove(sectorToRemove);
+        currentSectors.Remove(sectorToRemove);
         Destroy(sectorToRemove);
     }
-
-    // IEnumerator AddObstacle(float time)
-    // {
-        
-    // }
 }

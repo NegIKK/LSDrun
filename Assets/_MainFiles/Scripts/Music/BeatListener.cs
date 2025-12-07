@@ -1,9 +1,11 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class BeatListener : MonoBehaviour
 {
     [SerializeField] GameObject target;
+    [SerializeField] TMP_Text stepText;
     [SerializeField] float flashTime = 0.1f;
 
     void Start()
@@ -12,8 +14,9 @@ public class BeatListener : MonoBehaviour
         target.SetActive(false);
     }
 
-    void OnBeat()
+    void OnBeat(int step)
     {
+        stepText.text = "" + step;
         StartCoroutine(Flash());
     }
 

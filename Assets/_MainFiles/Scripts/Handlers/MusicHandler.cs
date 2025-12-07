@@ -13,38 +13,43 @@ public class MusicSnapshot
     public List<AudioGroupByScore> audioGroups = new List<AudioGroupByScore>();
 }
 
+
 [System.Serializable]
 public class AudioGroupByScore
 {
     public AudioMixerGroup group;
     public ScoreCurveProgress groupProgress;
 }
+
+
 public class MusicHandler : MonoBehaviour
 {
     public static MusicHandler Instance { get; private set; }
 
     [SerializeField] AudioMixer mixer;
-    [SerializeField] float BPM = 170f;
+    public float BPM = 170f;
+    [SerializeField] int maxSteps = 32;
+    [SerializeField] int currentStep;
     [SerializeField] List<MusicSnapshot> musicSnapshots = new List<MusicSnapshot>();
     
     int musicPartIndex = -1;
 
-    float beatInterval;          // длительность доли
-    float nextBeatTime;          // время следующего бита (по audioSource.time)
+    public float BeatInterval { get; private set; }         // длительность доли
+    public float NextBeatTime { get; private set; }          // время следующего бита (по audioSource.time)
 
     private void Awake()
     {
         if (Instance != null) Debug.LogError("More than one " + this + " on Scene!");
         Instance = this;
+
+        BeatInterval = 60f / BPM;
+        NextBeatTime = BeatInterval;  
     }
 
     void Start()
     {
         // GameHandler.Instance.OnPlayerStatsChange += OnPlayerStatsChange;
         GameHandler.Instance.OnBeatEvent += OnBeat; 
-
-        beatInterval = 60f / BPM;
-        nextBeatTime = beatInterval;   
     }
 
     void Update()
@@ -56,14 +61,22 @@ public class MusicHandler : MonoBehaviour
     {
         float time = Time.time;
 
-        if(time >= nextBeatTime)
+        if(time >= NextBeatTime)
         {
-            nextBeatTime += beatInterval;
-            GameHandler.Instance.OnBeatEvent?.Invoke();
+            NextBeatTime += BeatInterval;
+            
+            if(currentStep >= maxSteps)
+            {
+                currentStep = 0;
+            }
+
+            ++currentStep;
+
+            GameHandler.Instance.OnBeatEvent?.Invoke(currentStep);
         }
     }
 
-    void OnBeat()
+    void OnBeat(int step)
     {
         int score = GameHandler.Instance.mainScore;
            
@@ -88,5 +101,10 @@ public class MusicHandler : MonoBehaviour
 
         float timeToChange = musicPart.smoothChangeTime;
         musicPart.snapshot.TransitionTo(timeToChange);
+    }
+
+    public int GetMaxSteps()
+    {
+        return maxSteps;
     }
 }
