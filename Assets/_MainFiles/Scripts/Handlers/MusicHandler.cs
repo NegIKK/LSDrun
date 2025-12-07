@@ -31,6 +31,10 @@ public class MusicHandler : MonoBehaviour
     [SerializeField] int maxSteps = 32;
     [SerializeField] int currentStep;
     [SerializeField] List<MusicSnapshot> musicSnapshots = new List<MusicSnapshot>();
+    [SerializeField] GameObject audioSourceObject;
+    [SerializeField] List<AudioSource> audioSources = new List<AudioSource>();
+
+    bool musicIsPlaying = false;
     
     int musicPartIndex = -1;
 
@@ -44,6 +48,9 @@ public class MusicHandler : MonoBehaviour
 
         BeatInterval = 60f / BPM;
         NextBeatTime = BeatInterval;  
+
+        AudioSource[] sources = audioSourceObject.GetComponents<AudioSource>();
+        audioSources.AddRange(sources);
     }
 
     void Start()
@@ -70,9 +77,19 @@ public class MusicHandler : MonoBehaviour
                 currentStep = 0;
             }
 
-            ++currentStep;
+            if (!musicIsPlaying)
+            {
+                musicIsPlaying = true;
+                
+                foreach(AudioSource source in audioSources)
+                {
+                    source.Play();
+                }
+            }
 
+            ++currentStep;
             GameHandler.Instance.OnBeatEvent?.Invoke(currentStep);
+            
         }
     }
 

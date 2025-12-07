@@ -120,7 +120,7 @@ AudioMixerSnapshotController:
     081faff8d4b74914db60afdc62e2bfca: -80
     a44dceda8ee6c5f47a0fdbe7366db4b2: -80
     0f4493fa04334834cb5a9f8f9a008ce4: -80
-    673f701c3dd4fda4f90bc4c2ba702adf: -0.025776565
+    673f701c3dd4fda4f90bc4c2ba702adf: -10.867776
     ead8683c267829340b22a3874f8ac834: 0.025578512
     dc8a5e4c70c69254c88b08e3b9806f34: -80
     94bbbdac0310cb34d8ff0e607b1000ae: -1.8241322
@@ -508,7 +508,7 @@ AudioMixerController:
     - 20dd475bdf0ec4f4a9f3d6971d70af2c
     name: Stems
   m_CurrentViewIndex: 1
-  m_TargetSnapshot: {fileID: -5559206321884842187}
+  m_TargetSnapshot: {fileID: 943402809863675064}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
