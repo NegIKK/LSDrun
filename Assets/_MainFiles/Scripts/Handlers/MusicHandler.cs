@@ -29,7 +29,8 @@ public class MusicHandler : MonoBehaviour
     [SerializeField] AudioMixer mixer;
     public float BPM = 170f;
     [SerializeField] int maxSteps = 32;
-    [SerializeField] int currentStep;
+    [SerializeField] float startOffset = 0.2f;
+     int currentStep;
     [SerializeField] List<MusicSnapshot> musicSnapshots = new List<MusicSnapshot>();
     [SerializeField] GameObject audioSourceObject;
     [SerializeField] List<AudioSource> audioSources = new List<AudioSource>();
@@ -55,14 +56,9 @@ public class MusicHandler : MonoBehaviour
         audioSources.AddRange(sources);
 
 
-        dspStart = AudioSettings.dspTime + 0.1f;
-
-        foreach(AudioSource source in audioSources)
-        {
-            source.PlayScheduled(dspStart);
-        }
         
-        NextBeatTime = dspStart + BeatInterval;
+
+        
 
     }
 
@@ -70,6 +66,14 @@ public class MusicHandler : MonoBehaviour
     {
         // GameHandler.Instance.OnPlayerStatsChange += OnPlayerStatsChange;
         GameHandler.Instance.OnBeatEvent += OnBeat; 
+
+        dspStart = AudioSettings.dspTime + startOffset;
+        foreach(AudioSource source in audioSources)
+        {
+            source.PlayScheduled(dspStart);
+        }
+        
+        NextBeatTime = dspStart + BeatInterval;
     }
 
     void Update()
@@ -81,10 +85,11 @@ public class MusicHandler : MonoBehaviour
     {
         double time = AudioSettings.dspTime;
 
-        if(time >= NextBeatTime)
+        while (time >= NextBeatTime)
         {
             NextBeatTime += BeatInterval;
             
+            ++currentStep;
             if(currentStep >= maxSteps)
             {
                 currentStep = 0;
@@ -100,7 +105,7 @@ public class MusicHandler : MonoBehaviour
             //     }
             // }
 
-            ++currentStep;
+            
             GameHandler.Instance.OnBeatEvent?.Invoke(currentStep);
             
         }
