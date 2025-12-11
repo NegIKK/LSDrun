@@ -1,0 +1,888 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &999888009941928994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744131950864444155}
+  m_Layer: 0
+  m_Name: Train (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1744131950864444155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999888009941928994}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.334648, y: 0, z: 24.31236}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7746557280605743458}
+  - {fileID: 5525380058408413691}
+  - {fileID: 2663319171842797130}
+  - {fileID: 7779479863965604255}
+  - {fileID: 2618815357095238483}
+  - {fileID: 4138987128039710800}
+  m_Father: {fileID: 4595172983360570713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4175444805443813284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4413097512023119957}
+  m_Layer: 0
+  m_Name: Train
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4413097512023119957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175444805443813284}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -43.66535, y: 0, z: 24.31236}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3897790515220590808}
+  - {fileID: 5442188931742055077}
+  - {fileID: 5710310873945905408}
+  - {fileID: 4467338749339665239}
+  - {fileID: 2127495438614482923}
+  - {fileID: 6345195278977288242}
+  m_Father: {fileID: 4595172983360570713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1524208264607348337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689568498369621442, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: m_Name
+      value: Sector Background Variant 04
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4413097512023119957}
+    - targetCorrespondingSourceObject: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1744131950864444155}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+--- !u!4 &4595172983360570713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3090109449743856424, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+  m_PrefabInstance: {fileID: 1524208264607348337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1877113365761632256
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4413097512023119957}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6653519
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.687639
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &2127495438614482923 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 1877113365761632256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2557125192473119137
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1744131950864444155}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6653519
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 31.68764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &2663319171842797130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 2557125192473119137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2584327092254719160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1744131950864444155}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6653519
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 49.687637
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &2618815357095238483 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 2584327092254719160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3575016629880313651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4413097512023119957}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6653519
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.31236
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &3897790515220590808 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 3575016629880313651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4212437476797047996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4413097512023119957}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.665352
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.68764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &4467338749339665239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 4212437476797047996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4537969950249568187
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1744131950864444155}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.665352
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.68764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &4138987128039710800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 4537969950249568187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5239269668747083499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4413097512023119957}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6653519
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.312361
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &5710310873945905408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 5239269668747083499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5414644645915823632
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1744131950864444155}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.665352
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.687639
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &5525380058408413691 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 5414644645915823632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5479808184253242702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4413097512023119957}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.665352
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.687639
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &5442188931742055077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 5479808184253242702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6882643729548586969
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4413097512023119957}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.665352
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.68764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &6345195278977288242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 6882643729548586969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7785586520324689545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1744131950864444155}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6653519
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.31236
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &7746557280605743458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 7785586520324689545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7817398779275132532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1744131950864444155}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.665352
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.68764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+      propertyPath: m_Name
+      value: TrainCistern (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+--- !u!4 &7779479863965604255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f93f7c729781b454bb363c9ea8c6d412, type: 3}
+  m_PrefabInstance: {fileID: 7817398779275132532}
+  m_PrefabAsset: {fileID: 0}

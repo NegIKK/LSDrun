@@ -15,6 +15,7 @@ public class GameHandler : MonoBehaviour
     public Action OnPlayerStatsChange;
     public Action<BuffStatsSO> OnBuffGet;
     public Action<int> OnBeatEvent;
+    public Action<int> OnBonusSpawn;
 
     [SerializeField] PlayerSettingsSO playerSettings;
     [SerializeField] float sceneTime = 0f;

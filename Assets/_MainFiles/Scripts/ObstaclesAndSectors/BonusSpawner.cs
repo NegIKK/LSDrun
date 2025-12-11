@@ -22,21 +22,26 @@ public class BonusSpawner : MonoBehaviour
     {
         if (step % spawnStep != 0) return;
         
-        float bpm = MusicHandler.Instance.BPM;
-        float runSpeedKMH = GameHandler.Instance.runSpeed;
-        float runSpeed = runSpeedKMH * 1000f / 3600f;
-
-        float beatInterval = 60f / bpm;
-        float distancePerSpawnStep = runSpeed * (beatInterval * spawnStep);
-        
-        float spawnDistance = distancePerSpawnStep * Mathf.Ceil(minSpawnDistance / distancePerSpawnStep);
-
-        Debug.Log(step);
+        float spawnDistance = GetBeatAlignedSpawnDistance(step, minSpawnDistance);
 
         GameObject lastSector = sectorsHandler.currentSectors[sectorsHandler.currentSectors.Count - 1];
         Vector3 spawnPoint = new Vector3(0, 0, spawnDistance);
 
         Instantiate(bonus, spawnPoint, Quaternion.identity, lastSector.transform);
+        GameHandler.Instance.OnBonusSpawn?.Invoke(step);
     }
 
+    float GetBeatAlignedSpawnDistance(int _spawnStep, float _minSpawnDistance)
+    {
+        float bpm = MusicHandler.Instance.BPM;
+        float runSpeedKMH = GameHandler.Instance.runSpeed;
+        float runSpeed = runSpeedKMH * 1000f / 3600f;
+
+        float beatInterval = 60f / bpm;
+        float distancePerSpawnStep = runSpeed * (beatInterval * _spawnStep);
+        
+        float spawnDistance = distancePerSpawnStep * Mathf.Ceil(_minSpawnDistance / distancePerSpawnStep);
+        
+        return spawnDistance;
+    }
 }
