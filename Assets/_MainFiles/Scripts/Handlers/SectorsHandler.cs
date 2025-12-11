@@ -21,6 +21,14 @@ public class SectorsHandler : MonoBehaviour
     [RangeAttribute(-1f, 1f)]
     [SerializeField] float runDirection = -1f;
 
+<<<<<<< Updated upstream
+=======
+    [SerializeField] float spawnPointDistance;
+    [SerializeField] GameObject bonus;
+    [SerializeField] int bonusStep;
+     bool isGameStarted = false;
+
+>>>>>>> Stashed changes
     private void Awake()
     {
         // if (Instance != null) Debug.LogError("More than one " + this + " on Scene!");
@@ -30,11 +38,37 @@ public class SectorsHandler : MonoBehaviour
     void Start()
     {
         // GameHandler.Instance.RegisterSectorHandler(this);
+<<<<<<< Updated upstream
+=======
+        GameHandler.Instance.OnPlayerStatsChange += UpdateSpeed;
+        // GameHandler.Instance.OnBeatEvent += AddObstaclesByTime;
+        // GameHandler.Instance.OnBeatEvent += AddBonus;
+
+        GameHandler.Instance.OnStartRun += StartRun;
+
+        SetRunSpeed(GameHandler.Instance.runSpeed);
+>>>>>>> Stashed changes
+    }
+
+    void StartRun()
+    {
+        isGameStarted = true;
     }
 
     void FixedUpdate()
     {
+<<<<<<< Updated upstream
         foreach (GameObject sector in sectors)
+=======
+        if(isGameStarted) SectorMovement();
+    }
+
+    void SectorMovement()
+    {
+        runSpeed = GameHandler.Instance.runSpeed;
+
+        foreach (GameObject sector in currentSectors)
+>>>>>>> Stashed changes
         {
             Vector3 sectorPos = sector.transform.position;
 
