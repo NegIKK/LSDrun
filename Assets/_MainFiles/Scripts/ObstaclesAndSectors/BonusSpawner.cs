@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BonusSpawner : MonoBehaviour
@@ -6,6 +7,8 @@ public class BonusSpawner : MonoBehaviour
     [Range(1,32)]
     [SerializeField] int spawnStep;
     int maxSteps;
+    int lastSpawnStep = -1;
+    HashSet<int> spawnedSteps = new HashSet<int>();
     
     [SerializeField] float minSpawnDistance = 75f;
 
@@ -18,9 +21,40 @@ public class BonusSpawner : MonoBehaviour
         maxSteps = MusicHandler.Instance.GetMaxSteps();
         sectorsHandler = GameHandler.Instance.GetSectorHandlerByType("Main");
     }
+
+    // void LateUpdate()
+    // {
+    //     foreach (var r in FindObjectsOfType<Renderer>())
+    //     {
+    //         Bounds b = r.bounds;
+
+    //         if (!IsFinite(b.center) || !IsFinite(b.extents))
+    //         {
+    //             Debug.LogError(
+    //                 $"INVALID AABB: {r.name}\n" +
+    //                 $"Pos: {r.transform.position}\n" +
+    //                 $"Scale: {r.transform.lossyScale}",
+    //                 r.gameObject
+    //             );
+    //         }
+    //     }
+    // }
+
+    // bool IsFinite(Vector3 v)
+    // {
+    //     return float.IsFinite(v.x) && float.IsFinite(v.y) && float.IsFinite(v.z);
+    // }
+
     void SpawnBonus(int step)
     {
+        // if (step == 1) {spawnedSteps.Clear(); Debug.Log("ClearBonusHash");}
+        if (step <= 0) return;
         if (step % spawnStep != 0) return;
+        if(lastSpawnStep == step) return;
+        lastSpawnStep = step;
+
+        // if(spawnedSteps.Contains(step)) return;
+        // spawnedSteps.Add(step);
         
         float spawnDistance = GetBeatAlignedSpawnDistance(step, minSpawnDistance);
 
@@ -29,6 +63,7 @@ public class BonusSpawner : MonoBehaviour
 
         Instantiate(bonus, spawnPoint, Quaternion.identity, lastSector.transform);
         GameHandler.Instance.OnBonusSpawn?.Invoke(step);
+        Debug.Log(this + " Spawned Bonus on " + step + " step");
     }
 
     float GetBeatAlignedSpawnDistance(int _spawnStep, float _minSpawnDistance)

@@ -6,15 +6,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] CameraShake cameraShake;
 
- 
     bool isSliding;
     bool isJumping;
     float verticalOffset;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {

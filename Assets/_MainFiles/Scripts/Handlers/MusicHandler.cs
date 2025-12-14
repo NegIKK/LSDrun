@@ -89,24 +89,15 @@ public class MusicHandler : MonoBehaviour
         {
             NextBeatTime += BeatInterval;
             
-            ++currentStep;
             if(currentStep >= maxSteps)
             {
                 currentStep = 0;
             }
 
-            // if (!musicIsPlaying)
-            // {
-            //     musicIsPlaying = true;
-                
-            //     foreach(AudioSource source in audioSources)
-            //     {
-            //         source.Play();
-            //     }
-            // }
-
+            ++currentStep;
             
             GameHandler.Instance.OnBeatEvent?.Invoke(currentStep);
+            Debug.Log("OnBeatEvent with " + currentStep);
             
         }
     }
