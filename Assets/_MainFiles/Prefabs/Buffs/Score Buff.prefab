@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score Buff
       objectReference: {fileID: 0}
+    - target: {fileID: 1245457445475470509, guid: bbeed911acb8e6342a1497f14673df68, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 19ee15dba6b323040811906cc397077b, type: 2}
     - target: {fileID: 1313974090504825689, guid: bbeed911acb8e6342a1497f14673df68, type: 3}
       propertyPath: buffStats
       value: 

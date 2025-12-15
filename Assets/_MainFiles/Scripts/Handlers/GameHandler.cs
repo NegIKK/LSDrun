@@ -59,6 +59,7 @@ public class GameHandler : MonoBehaviour
         OnBuffGet += GetBuff;
 
         OnPlayerStatsChange?.Invoke();
+        // GetBuff()
     }
 
     void FixedUpdate()
