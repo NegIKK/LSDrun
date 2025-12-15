@@ -118,6 +118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sector Background Variant 03
       objectReference: {fileID: 0}
+    - target: {fileID: 8672266208378640948, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}
+      propertyPath: sectorType
+      value: 3 Background
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3323212642107620793, guid: 3bd19633c7fa6ff44b93a4d56f049439, type: 3}

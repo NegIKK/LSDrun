@@ -13,9 +13,12 @@ public class BonusSpawner : MonoBehaviour
     [SerializeField] float minSpawnDistance = 75f;
 
     SectorsHandler sectorsHandler;
+    Transform player;
 
     void Start()
     {
+        player = GameHandler.Instance.player.transform;
+
         GameHandler.Instance.OnBeatEvent += SpawnBonus;
 
         maxSteps = MusicHandler.Instance.GetMaxSteps();
@@ -56,11 +59,12 @@ public class BonusSpawner : MonoBehaviour
         // if(spawnedSteps.Contains(step)) return;
         // spawnedSteps.Add(step);
         
-        float spawnDistance = GetBeatAlignedSpawnDistance(step, minSpawnDistance);
+        float spawnDistance = GetBeatAlignedSpawnDistance(spawnStep, minSpawnDistance);
 
         GameObject lastSector = sectorsHandler.currentSectors[sectorsHandler.currentSectors.Count - 1];
-        Vector3 spawnPoint = new Vector3(0, 0, spawnDistance);
-
+        // Vector3 spawnPoint = new Vector3(0, 0, spawnDistance);
+        Vector3 spawnPoint = Vector3.forward * spawnDistance;
+        
         Instantiate(bonus, spawnPoint, Quaternion.identity, lastSector.transform);
         GameHandler.Instance.OnBonusSpawn?.Invoke(step);
         Debug.Log(this + " Spawned Bonus on " + step + " step");
@@ -73,9 +77,12 @@ public class BonusSpawner : MonoBehaviour
         float runSpeed = runSpeedKMH * 1000f / 3600f;
 
         float beatInterval = 60f / bpm;
-        float distancePerSpawnStep = runSpeed * (beatInterval * _spawnStep);
+        float stepDistance = runSpeed * (beatInterval * _spawnStep);
+
+        int slot = Mathf.RoundToInt(_minSpawnDistance / stepDistance);
+        if(slot < 1) slot = 1;
         
-        float spawnDistance = distancePerSpawnStep * Mathf.Ceil(_minSpawnDistance / distancePerSpawnStep);
+        float spawnDistance = slot * stepDistance;
         
         return spawnDistance;
     }

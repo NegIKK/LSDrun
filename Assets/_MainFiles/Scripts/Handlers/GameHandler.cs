@@ -44,7 +44,7 @@ public class GameHandler : MonoBehaviour
     public int mainScore = 0;
     
 
-    Player player;
+    [SerializeField] public Player player;
     [SerializeField] List<SectorsHandler> sectorsHandlers = new List<SectorsHandler>();
 
     void Awake()

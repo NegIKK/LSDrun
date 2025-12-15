@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     bool isSliding;
     bool isJumping;
     float verticalOffset;
-
+    
     void Update()
     {
         Move();

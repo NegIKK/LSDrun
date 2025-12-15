@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 1
-  m_FogColor: {r: 0.44599998, g: 0.37830356, b: 0.418125, a: 1}
-  m_FogMode: 2
+  m_FogColor: {r: 0.645, g: 0.37539, b: 0.42269006, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.008
-  m_LinearFogStart: 10
-  m_LinearFogEnd: 60
-  m_AmbientSkyColor: {r: 0.7254902, g: 0.6519608, b: 0.627451, a: 1}
+  m_LinearFogStart: 6.9
+  m_LinearFogEnd: 200
+  m_AmbientSkyColor: {r: 0.8676176, g: 0.8610649, b: 0.99560636, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bonus: {fileID: 7498367547608148452, guid: dc72d3dd7fffd774c885866c1a93879e, type: 3}
   spawnStep: 8
-  minSpawnDistance: 1
+  minSpawnDistance: 160
 --- !u!114 &448314758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleSpawnChance: 0.5
-  spawnStep: 4
+  spawnStep: 8
   obstaclePrefabs:
   - {fileID: 3930180141473456653, guid: 91988fd4495b309488c5caf2a027a6c4, type: 3}
   - {fileID: 3225763606575888506, guid: d6dc010f27e8e6c4a8f5b73e2324ff13, type: 3}
@@ -1371,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473869910806422408, guid: 2b0d74d7ddc8b4a42b34e3af50e093e6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3488,7 +3488,7 @@ GameObject:
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1181288538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3509,7 +3509,7 @@ MonoBehaviour:
   - {fileID: 527331412}
   - {fileID: 447936328}
   runSpeed: 90
-  runDirection: -0.7
+  runDirection: -0.6
 --- !u!4 &1181288539
 Transform:
   m_ObjectHideFlags: 0
@@ -4086,7 +4086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473869910806422408, guid: 0bd094681a7645c438a338bad4acae91, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4265,7 +4265,7 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
   BPM: 180
   maxSteps: 32
-  startOffset: 3
+  startOffset: 2
   musicSnapshots:
   - snapshot: {fileID: 4737096185414796816, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
     scoreToChange: 10
@@ -4284,11 +4284,11 @@ MonoBehaviour:
     smoothChangeTime: 0
     audioGroups: []
   - snapshot: {fileID: 5804540105175312094, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
-    scoreToChange: 50
+    scoreToChange: 60
     smoothChangeTime: 0
     audioGroups: []
   - snapshot: {fileID: -8199841637930593272, guid: 85a10f7f7cc376149a29b4056909afab, type: 2}
-    scoreToChange: 60
+    scoreToChange: 100
     smoothChangeTime: 0
     audioGroups: []
   audioSourceObject: {fileID: 712140255}
@@ -4323,7 +4323,7 @@ MonoBehaviour:
   target: {fileID: 1828470599}
   stepText: {fileID: 2095170009}
   flashTime: 0.1
-  useMetronomeSound: 1
+  useMetronomeSound: 0
   useMetronomePitch: 0
   pitchStep: 4
   metronomeSound: {fileID: 8300000, guid: 205dc7909b600fa44894d00b29e6df1d, type: 3}
@@ -4968,7 +4968,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.9009434, b: 0.97700703, a: 1}
-  m_Intensity: 2.48
+  m_Intensity: 3.62
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5011,7 +5011,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
-  m_ColorTemperature: 3793
+  m_ColorTemperature: 4973
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -5030,13 +5030,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659702921}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12733771, y: 0.95150536, z: -0.15390849, w: -0.23395483}
+  m_LocalRotation: {x: 0.016836606, y: 0.64821583, z: -0.1990451, w: -0.73478836}
   m_LocalPosition: {x: -1, y: 2, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.492, y: 209.879, z: 18.86}
+  m_LocalEulerAnglesHint: {x: 13.492, y: 279.415, z: 18.86}
 --- !u!1 &1681938240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,9 +5951,11 @@ MonoBehaviour:
   maxFov: 100
   crossedObstaclesCount: 0
   mainScore: 0
+  player: {fileID: 1960953118}
   sectorsHandlers:
   - {fileID: 448314755}
   - {fileID: 387765095}
+  - {fileID: 1181288538}
 --- !u!4 &1930745639
 Transform:
   m_ObjectHideFlags: 0
@@ -6154,7 +6156,7 @@ MonoBehaviour:
   minMirrorTransform: {fileID: 2124481509}
   maxMirrorTransform: {fileID: 776739657}
   particles: {fileID: 586793249}
-  particlesEnablingScore: 85
+  particlesEnablingScore: 50
   mirrorPositionProgress:
     minScore: 0
     maxScore: 100
@@ -6189,6 +6191,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8822619332626612637, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
   m_PrefabInstance: {fileID: 370498128091455658}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960953118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 796745363351133114, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
+  m_PrefabInstance: {fileID: 370498128091455658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481818343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb375085cd4ae4bb1676440f7c05e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2043673026
 GameObject:
   m_ObjectHideFlags: 0
