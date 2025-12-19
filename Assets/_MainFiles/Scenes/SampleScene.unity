@@ -11688,6 +11688,7 @@ GameObject:
   - component: {fileID: 1930745639}
   - component: {fileID: 1930745638}
   - component: {fileID: 1930745640}
+  - component: {fileID: 1930745641}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -11967,6 +11968,26 @@ MonoBehaviour:
       m_RotationOrder: 4
     minValue: 60
     maxValue: 110
+--- !u!114 &1930745641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930745637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e53ec6ef47c0c340a4844fe49a47251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeDirectionTime: 3
+  changingSpeed: 0.2
+  minXBend: -0.2
+  maxXBend: 0.2
+  minYBend: -0.05
+  maxYBend: 0.15
+  xBend: 0
+  yBend: 0
 --- !u!114 &1960953108 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1941036577156401834, guid: 30a88ad06bbc9bf4a8a3fa3c4b18327d, type: 3}
