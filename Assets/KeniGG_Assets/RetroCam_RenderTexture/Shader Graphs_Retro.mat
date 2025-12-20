@@ -55,7 +55,7 @@ Material:
     - _Dither_Threshold: 1
     - _Lines_Opacity: -4
     - _Lines_Scale: 0.51154
-    - _Quatnization_Level: 128
+    - _Quatnization_Level: 32
     - _Spherize: 0.5
     - _Stencil: 0
     - _StencilComp: 8
